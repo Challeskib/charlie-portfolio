@@ -4,6 +4,7 @@ import axios from "axios";
 
 export const MyList = () => {
   const [myData, setMyData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios
@@ -18,24 +19,29 @@ export const MyList = () => {
           };
         });
         setMyData(newArray);
+        setIsLoading(false);
       });
   }, []);
 
   return (
     <div>
-      <ul>
-        {myData.map((arrProps) => {
-          return (
-            <li key={arrProps.key}>
-              <span>
-                <a href={arrProps.link} target="_blank">
-                  {arrProps.name}
-                </a>
-              </span>
-            </li>
-          );
-        })}
-      </ul>
+      {isLoading == false ? (
+        <ul>
+          {myData.map((arrProps) => {
+            return (
+              <li key={arrProps.key}>
+                <span>
+                  <a href={arrProps.link} target="_blank">
+                    {arrProps.name}
+                  </a>
+                </span>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <h1>LOADING LOADING LOADING</h1>
+      )}
     </div>
   );
 };
