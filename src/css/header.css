@@ -1,0 +1,11 @@
+header {
+  margin: 50px;
+  background-color: rgb(43, 55, 124);
+  padding: 4%;
+  border-radius: 33%;
+  text-align: center;
+  -webkit-border-radius: 33%;
+  -moz-border-radius: 33%;
+  -ms-border-radius: 33%;
+  -o-border-radius: 33%;
+}

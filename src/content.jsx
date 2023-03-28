@@ -5,18 +5,15 @@ export const Content = () => {
   return (
     <div>
       <h3>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        Reiciendis, possimus officiis maiores tempore eius quibusdam
-        tenetur obcaecati modi illo odit. Numquam, rem maiores!
-        Expedita, dignissimos sunt rem dolorum hic culpa. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit. Quam praesentium
-        ad cupiditate qui! Beatae, officia porro blanditiis quia
-        voluptates aut officiis earum non aliquid voluptatum ut
-        nostrum nisi culpa debitis? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Eaque quis mollitia numquam
-        excepturi aliquid officiis totam illum molestias, temporibus
-        ullam neque? Alias asperiores officia eum ex repellat aliquid
-        eaque quasi?
+        Nomen tuum "Charlie" in Latino "Carolus" sonat. Votum tuum est
+        programmare per vitam. Amas pizza et musiciam, sed odisti alia
+        cibaria. Habes cattum quem amas, et nomine eius est "Felix".
+        Habetis fratrem et sororem, sed es primogenitus. In tempore
+        liberum, legere et scribere poesis placet tibi. Hoc anno, ad
+        ludum computatralem competit, et obtinuit trophaeum. Semper ad
+        discendum paratus es, et nunquam desistas a crescere. Latine
+        discere vult, et sperat unum die linguam fluenter loqui posse.
+        Amicos multos habes, et amicitia est maxima virtus tua.
       </h3>
     </div>
   );
