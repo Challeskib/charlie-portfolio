@@ -4,11 +4,16 @@
   height: 100%;
 }
 
+h3 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 .inner-container {
-  background-color: #11151d;
+  background-color: #20304e;
   width: 80%;
   height: 80%;
-  margin: 50px;
+  margin: 50px auto;
   padding: 50px;
   border-radius: 5vw;
   -webkit-border-radius: 5vw;
@@ -18,10 +23,52 @@
 }
 
 .buttons {
-  font-family: system-ui, sans-serif;
-  font-size: 3.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   cursor: pointer;
-  padding: 0.1em 0.6em;
+  padding: 0.5em 1em;
   font-weight: bold;
   border: none;
+  color: #fff;
+  background-color: #2c3e50;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.buttons:hover {
+  background-color: #169bb3;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .inner-container {
+    width: 90%;
+    height: 70%;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 3vw;
+    -webkit-border-radius: 3vw;
+    -moz-border-radius: 3vw;
+    -ms-border-radius: 3vw;
+    -o-border-radius: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner-container {
+    width: 90%;
+    height: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 2vw;
+    -webkit-border-radius: 2vw;
+    -moz-border-radius: 2vw;
+    -ms-border-radius: 2vw;
+    -o-border-radius: 2vw;
+  }
+
+  .buttons {
+    font-size: 1.2rem;
+    padding: 0.4em 0.8em;
+  }
 }

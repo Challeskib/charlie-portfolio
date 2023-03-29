@@ -4,25 +4,35 @@ import { MyList } from "./list";
 import { Content } from "./content";
 import "./css/App.css";
 import { MyCatList } from "./catlist";
-
-const ShowTextButtons = () => {
-  return (
-    <div className="button-container">
-      <button className="buttons">Show Github Projects</button>
-      <button className="buttons">About me</button>
-    </div>
-  );
-};
+import { useState } from "react";
 
 function App() {
+  const [showText, setShowText] = useState(false);
+
+  const TextButtons = () => {
+    return (
+      <div className="button-container">
+        <button className="buttons" onClick={() => setShowText(true)}>
+          Github Projects
+        </button>
+        <button
+          className="buttons"
+          onClick={() => setShowText(false)}
+        >
+          About me
+        </button>
+      </div>
+    );
+  };
+
   return (
     <div className="App">
       <Header />
       <div className="container">
         <div className="inner-container">
-          <ShowTextButtons />
-          <MyList />
-          <Content />
+          <TextButtons />
+          {showText ? <MyList /> : <Content />}
+
           <MyCatList />
         </div>
       </div>

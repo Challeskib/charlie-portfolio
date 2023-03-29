@@ -2,17 +2,9 @@ import { useState, useEffect } from "react";
 
 export const MyCatList = () => {
   const [catFact, setCatFact] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState();
 
-  useEffect(() => {
-    fetch("https://catfact.ninja/fact?max_length=140")
-      .then((response) => response.json())
-      .then((data) => {
-        setCatFact(data.fact);
-        setIsLoading(false);
-        console.log(data.fact);
-      });
-  }, []);
+  useEffect(() => {}, []);
 
   const fetchCatFact = () => {
     setIsLoading(true);
@@ -27,7 +19,9 @@ export const MyCatList = () => {
 
   return (
     <div>
-      <button onClick={fetchCatFact}>CAT FACT BUTTON</button>
+      <button onClick={fetchCatFact}>
+        RANDOM CAT FACT BUTTON API
+      </button>
       {isLoading ? <p>Loading...</p> : <p>{catFact}</p>}
     </div>
   );

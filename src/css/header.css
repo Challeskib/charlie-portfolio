@@ -1,11 +1,10 @@
 header {
-  margin: 50px;
-  background-color: rgb(43, 55, 124);
-  padding: 4%;
-  border-radius: 33%;
-  text-align: center;
-  -webkit-border-radius: 33%;
-  -moz-border-radius: 33%;
-  -ms-border-radius: 33%;
-  -o-border-radius: 33%;
+  background-color: #163f57;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
 }

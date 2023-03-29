@@ -2,9 +2,11 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import "./css/mylist.css";
+
 export const MyList = () => {
   const [myData, setMyData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     axios
@@ -16,6 +18,7 @@ export const MyList = () => {
             key: arrProps.id,
             name: arrProps.name,
             link: arrProps.html_url,
+            description: arrProps.description,
           };
         });
         setMyData(newArray);
@@ -30,11 +33,12 @@ export const MyList = () => {
           {myData.map((arrProps) => {
             return (
               <li key={arrProps.key}>
-                <span>
-                  <a href={arrProps.link} target="_blank">
-                    {arrProps.name}
-                  </a>
-                </span>
+                <a href={arrProps.link} target="_blank">
+                  {arrProps.name}
+                </a>
+                <a className="description">
+                  Description: {arrProps.description}
+                </a>
               </li>
             );
           })}
